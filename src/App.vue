@@ -11,7 +11,10 @@
       <div class="card" v-for="card in cards" :key="card.title">
         <div class="head">
           <h3>{{card.title}}</h3>
-          <h5>{{card.date}}</h5>
+          <div>
+            <p>Date:{{card.date.slice(0,10)}}</p>
+            <p>Time:{{card.date.slice(11,16)}}</p>
+          </div>
         </div>
         <div class="body">
           <p>{{card.description}}</p>
@@ -153,6 +156,10 @@ body{
   justify-content: space-between;
   padding: 0px 10px;
   border-bottom: 1px solid rgb(163, 163, 163);
+}
+
+.card .head p{
+  font-size: 10px;
 }
 
 .card .body{

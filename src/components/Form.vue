@@ -7,7 +7,7 @@
             <p v-if="isErrTitle">Min 3 and max 40 character for Title!</p>
         </div>
         <div v-bind:class="{ text: isErrDesc }">
-            <p v-if="isErrDesc">Min 33 and max 255 character for Description!</p>
+            <p v-if="isErrDesc">Min 3 and max 255 character for Description!</p>
         </div>
     </div>
     <form @submit="addCard">
